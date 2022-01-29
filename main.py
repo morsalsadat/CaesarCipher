@@ -12,7 +12,7 @@ def caesar(text, shift, direction):
         encoded += alphabet[alphabet.index(letter) - 26 + shift]
       else:
         encoded += alphabet[alphabet.index(letter) + shift]
-    print(encoded)
+    print(f"The {direction}d message is: {encoded}")
   else:
     decoded = ""
     for letter in text:
@@ -20,6 +20,6 @@ def caesar(text, shift, direction):
         decoded += alphabet[alphabet.index(letter) + 26 - shift]
       else:
         decoded += alphabet[alphabet.index(letter) - shift]
-    print(decoded)
+    print(f"The {direction}d message is: {decoded}")
 
 caesar(text, shift, direction)
